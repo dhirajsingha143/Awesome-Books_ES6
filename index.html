@@ -9,8 +9,8 @@
     <title>Awesome | Book</title>
 </head>
 
-<body>
-    <header class="padding-x">
+<body class="padding-x">
+    <header>
         <nav class="nav-container">
             <h3 class="logo">Awesome Books using ES6</h3>
             <ul class="nav-list-container">
@@ -22,9 +22,36 @@
     </header>
     <main>
 
-    </main>
-    <footer>
+        <section class="book-container">
+            <h1 class="headline">Awesome Books List</h1>
+            <ul class="book-list-container">
 
+            </ul>
+        </section>
+
+        <section class="form-container">
+            <h2 class="form-headline">Add new Books</h2>
+            <form action="" class="form" id="form">
+                <input class="title" type="text" name="title" required>
+                <input class="author" type="text" name="author" required>
+                <button type="submit">Add</button>
+            </form>
+        </section>
+
+        <section class="contact-container">
+            <h2 class="contact-headline">Contact Information</h2>
+            <p class="contact-info">Do have any question or you just want to say "Hello"?<br>You can reach out to us!
+            </p>
+            <ul class="contact-list">
+                <li>Our Email: dhirajsingha89@gmail.com</li>
+                <li>Our phone no: +2347039606814</li>
+                <li>Our address: Hollowway road 22,84503, London, UK</li>
+            </ul>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <p>&copy;copyright 2023</p>
     </footer>
 
     <script type="modules" src="index.js"></script>
