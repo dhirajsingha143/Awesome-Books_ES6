@@ -15,30 +15,32 @@
             <h3 class="logo">Awesome Books using ES6</h3>
             <ul class="nav-list-container">
                 <li class="nav-list"><a class="nav-link" href="#">List</a></li>
+                <li class="nav-list"><hr class="vertical-line"></li>
                 <li class="nav-list"><a class="nav-link" href="#">Add Books</a></li>
+                <li class="nav-list"><hr class="vertical-line"></li>
                 <li class="nav-list"><a class="nav-link" href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
 
-        <section class="book-container">
+        <section class="book-container" id="book-container">
             <h1 class="headline">Awesome Books List</h1>
             <ul class="book-list-container">
 
             </ul>
         </section>
 
-        <section class="form-container">
+        <section class="form-container" id="form-container">
             <h2 class="form-headline">Add new Books</h2>
             <form action="" class="form" id="form">
-                <input class="title" type="text" name="title" required>
-                <input class="author" type="text" name="author" required>
-                <button type="submit">Add</button>
+                <input class="title" id="title" type="text" name="title" required>
+                <input class="author" id="author" type="text" name="author" required>
+                <button type="submit" class="btn">Add</button>
             </form>
         </section>
 
-        <section class="contact-container">
+        <section class="contact-container" id="contact-container">
             <h2 class="contact-headline">Contact Information</h2>
             <p class="contact-info">Do have any question or you just want to say "Hello"?<br>You can reach out to us!
             </p>
@@ -51,7 +53,7 @@
 
     </main>
     <footer class="footer">
-        <p>&copy;copyright 2023</p>
+        <p class="footer-headline">&copy;copyright 2023</p>
     </footer>
 
     <script type="modules" src="index.js"></script>
