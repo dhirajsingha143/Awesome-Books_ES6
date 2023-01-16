@@ -1,0 +1,170 @@
+/* Default style */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::after , *::before {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid red;
+}
+
+.padding-x {
+  padding: 0 2rem 0rem 2rem;
+}
+
+/* Navigation-Section */
+
+.nav-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
+}
+
+.logo {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.nav-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.vertical-line {
+  height: 15px;
+}
+
+/* Book-Container-Section */
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
+  height: 70vh;
+  margin-top: 2rem;
+}
+
+.headline {
+font-size: 50px;
+}
+
+.book-list-container {
+  height: 300px;
+  width: 500px;
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
+}
+
+.books {
+  /* This class will be load dynamically */
+}
+
+/* Form-Container-section */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
+  height: 70vh;
+  margin-top: 2rem;
+}
+
+.form-headline {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 15px;
+  width: 300px;
+  height: 100px;
+}
+
+.title {
+  width: 300px;
+}
+
+.author {
+  width: 300px;
+}
+
+.btn {
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
+}
+
+/* Contact-Container-Section */
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
+  height: 70vh;
+  margin-top: 2rem;
+}
+
+.contact-headline {
+  font-size: 30px;
+}
+
+.contact-info {
+  font-size: 20px;
+}
+
+.contact-list {
+
+}
+
+/* Footer-Container-Section */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
+  height: 8vh;
+  margin-top: 2rem;
+}
+
+.footer-headline {
+  font-size: 20px;
+}
