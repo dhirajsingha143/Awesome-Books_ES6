@@ -1,14 +1,54 @@
-export default class Ui {
+const booksContainer = document.querySelector('.book-list-container');
 
-    static displayBooks(book) {
-    const store = document.querySelector('.book-list-container')
-    const booklist = document.createElement('li');
-    booklist.className = 'book';
-    booklist.innerHTML = `
-      <div class="book-title">${book.title}</div>
-      <div class="book-author">${book.author}</div>
-      <button class="rem-btn" id="${book.id}" >Remove</button>
-      `;
-    store.appendChild(booklist);
+export default class UI {
+  // Get Books from Local Storage and Updates the UI
+  static updateBooks(booksContainer) {
+    const books = JSON.parse(localStorage.getItem('books'));
+    booksContainer.innerHTML = '';
+    if (books) books.forEach((book) => this.addBook(book));
+  }
+
+  // Creates the UI's Book
+  static addBook(book) {
+    const bookUI = document.createElement('li');
+    bookUI.className = 'book';
+    const BookId = (book.title + book.author).replace(/\s/g, '');
+    bookUI.setAttribute('id', (BookId));
+    bookUI.innerHTML = `
+                <p class="book-title">"
+                    <span id='${BookId}title'>${book.title}</span>" by 
+                    <span id='${BookId}author'>${book.author}</span>
+                </p>
+                <button class="${BookId}btn remove-button" type="button">
+                    &times;
+                </button>`;
+    booksContainer.append(bookUI);
+  }
+
+  // Removes the Book
+  static removeBook(BookId) {
+    document.getElementById(BookId).remove();
+  }
+
+  // This displays an error
+    static displayError(message) {
+      const errorMessage = document.querySelector('.error-message');
+      errorMessage.innerHTML = message;
+      setTimeout(() => {
+        errorMessage.innerHTML = '';
+      }, 3000);
     }
+
+  // Check if book has been added
+  static validate(book) {
+    const books = JSON.parse(localStorage.getItem('books'));
+    if (!books) return true;
+    let count = 0;
+    books.forEach((b) => {
+      if (b.title === book.title && b.author === book.author) count += 1;
+    });
+    if (count === 0) return true;
+    UI.displayError('Book title and author already added');
+    return false;
+  }
 }
