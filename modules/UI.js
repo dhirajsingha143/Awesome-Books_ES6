@@ -20,7 +20,7 @@ export default class UI {
                     <span id='${BookId}author'>${book.author}</span>
                 </p>
                 <button class="${BookId}btn remove-button" type="button">
-                    &times;
+                    Remove
                 </button>`;
     booksContainer.append(bookUI);
   }
@@ -39,7 +39,7 @@ export default class UI {
       if (b.title === book.title && b.author === book.author) count += 1;
     });
     if (count === 0) return true;
-    UI.displayError('Book title and author already added');
+    window.alert('Book title and author already added');
     return false;
   }
 }
