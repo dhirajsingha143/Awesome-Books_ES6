@@ -30,15 +30,6 @@ export default class UI {
     document.getElementById(BookId).remove();
   }
 
-  // This displays an error
-    static displayError(message) {
-      const errorMessage = document.querySelector('.error-message');
-      errorMessage.innerHTML = message;
-      setTimeout(() => {
-        errorMessage.innerHTML = '';
-      }, 3000);
-    }
-
   // Check if book has been added
   static validate(book) {
     const books = JSON.parse(localStorage.getItem('books'));
