@@ -1,6 +1,8 @@
 import Book from './modules/book.js';
 import UI from './modules/UI.js';
 import Storage from './modules/localstore.js';
+import { DateTime } from './modules/luxon.js';
+import { createDate } from './modules/date.js';
 
 // ====== These are the elements that will be accessed universally
 const form = document.getElementById('form');
@@ -69,3 +71,7 @@ contactbtn.addEventListener('click', () => {
   ac.style.display = 'none';
   cc.style.display = 'flex';
 });
+
+// Display Date at One Minute Interval
+createDate(DateTime);
+setInterval(() => { createDate(DateTime); }, 50000);

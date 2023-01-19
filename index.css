@@ -56,6 +56,15 @@ body {
   height: 15px;
 }
 
+/* Date-container */
+.date{
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 16px;
+}
+
 /* Book-Container-Section */
 
 .book-container {
@@ -66,7 +75,7 @@ body {
   border: 2px solid black;
   box-shadow: 3px 3px black;
   height: 70vh;
-  margin-top: 2rem;
+  margin-top: 0.8rem;
 }
 
 .headline {
@@ -118,7 +127,7 @@ font-size: 50px;
   border: 2px solid black;
   box-shadow: 3px 3px black;
   height: 70vh;
-  margin-top: 2rem;
+  margin-top: 0.8rem;
 }
 
 .form-headline {
@@ -160,7 +169,7 @@ font-size: 50px;
   border: 2px solid black;
   box-shadow: 3px 3px black;
   height: 70vh;
-  margin-top: 2rem;
+  margin-top: 0.8rem;
 }
 
 .contact-headline {
@@ -181,7 +190,7 @@ font-size: 50px;
   border: 2px solid black;
   box-shadow: 3px 3px black;
   height: 8vh;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .footer-headline {
