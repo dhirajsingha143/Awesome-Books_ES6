@@ -4,7 +4,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::after , *::before {
+*,
+*::after,
+*::before {
   box-sizing: inherit;
   margin: 0;
 }
@@ -15,7 +17,7 @@ body {
 }
 
 .padding-x {
-  padding: 0 2rem 0rem 2rem;
+  padding: 0 2rem 0 2rem;
 }
 
 /* Navigation-Section */
@@ -57,7 +59,7 @@ body {
 }
 
 /* Date-container */
-.date{
+.date {
   height: 30px;
   display: flex;
   justify-content: flex-end;
@@ -79,7 +81,7 @@ body {
 }
 
 .headline {
-font-size: 50px;
+  font-size: 50px;
 }
 
 .book-list-container {

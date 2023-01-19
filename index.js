@@ -2,7 +2,7 @@ import Book from './modules/book.js';
 import UI from './modules/UI.js';
 import Storage from './modules/localstore.js';
 import { DateTime } from './modules/luxon.js';
-import { createDate } from './modules/date.js';
+import createDate from './modules/date.js';
 
 // ====== These are the elements that will be accessed universally
 const form = document.getElementById('form');
@@ -43,7 +43,7 @@ form.addEventListener('submit', (event) => {
   removeBook(books);
 });
 
-//loading screens
+// loading screens
 // selecting buttons
 const listbtn = document.getElementById('link-list');
 const addbtn = document.getElementById('link-add');
