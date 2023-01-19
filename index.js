@@ -40,3 +40,32 @@ form.addEventListener('submit', (event) => {
   const books = document.querySelectorAll('.book');
   removeBook(books);
 });
+
+//loading screens
+// selecting buttons
+const listbtn = document.getElementById('link-list');
+const addbtn = document.getElementById('link-add');
+const contactbtn = document.getElementById('link-contact');
+// slecting containers
+const bc = document.getElementById('book-container');
+const ac = document.getElementById('form-container');
+const cc = document.getElementById('contact-container');
+
+// adding event listeners
+addbtn.addEventListener('click', () => {
+  bc.style.display = 'none';
+  ac.style.display = 'flex';
+  cc.style.display = 'none';
+});
+
+listbtn.addEventListener('click', () => {
+  bc.style.display = 'flex';
+  ac.style.display = 'none';
+  cc.style.display = 'none';
+});
+
+contactbtn.addEventListener('click', () => {
+  bc.style.display = 'none';
+  ac.style.display = 'none';
+  cc.style.display = 'flex';
+});
