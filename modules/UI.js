@@ -30,6 +30,15 @@ export default class UI {
     document.getElementById(BookId).remove();
   }
 
+  // set error msg
+  static displayError(message) {
+    const errorMessage = document.querySelector('.error-message');
+    errorMessage.innerHTML = message;
+    setTimeout(() => {
+      errorMessage.innerHTML = '';
+    }, 3000);
+  }
+
   // Check if book has been added
   static validate(book) {
     const books = JSON.parse(localStorage.getItem('books'));
@@ -39,7 +48,7 @@ export default class UI {
       if (b.title === book.title && b.author === book.author) count += 1;
     });
     if (count === 0) return true;
-    window.alert('Book title and author already added');
+    UI.displayError('Book title and author already added');
     return false;
   }
 }
