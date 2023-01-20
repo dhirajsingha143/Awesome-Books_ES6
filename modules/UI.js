@@ -2,14 +2,14 @@ const booksContainer = document.querySelector('.book-list-container');
 
 export default class UI {
   // Get Books from Local Storage and Updates the UI
-  static updateBooks(booksContainer) {
+  static updateBooks = (booksContainer) => {
     const books = JSON.parse(localStorage.getItem('books'));
     booksContainer.innerHTML = '';
     if (books) books.forEach((book) => this.addBook(book));
   }
 
   // Creates the UI's Book
-  static addBook(book) {
+  static addBook = (book) => {
     const bookUI = document.createElement('li');
     bookUI.className = 'book';
     const BookId = (book.title + book.author).replace(/\s/g, '');
@@ -26,12 +26,12 @@ export default class UI {
   }
 
   // Removes the Book
-  static removeBook(BookId) {
+  static removeBook = (BookId) => {
     document.getElementById(BookId).remove();
   }
 
   // set error msg
-  static displayError(message) {
+  static displayError = (message) => {
     const errorMessage = document.querySelector('.error-message');
     errorMessage.innerHTML = message;
     setTimeout(() => {
@@ -40,7 +40,7 @@ export default class UI {
   }
 
   // Check if book has been added
-  static validate(book) {
+  static validate = (book) => {
     const books = JSON.parse(localStorage.getItem('books'));
     if (!books) return true;
     let count = 0;
